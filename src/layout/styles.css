@@ -1,0 +1,8 @@
+.layout{
+    height: 80vh;
+    width: 70vw;
+    min-height: 700px;
+    min-width: 700px;
+    -webkit-box-shadow: 0px 0px 41px 5px rgba(0,0,0,0.52); 
+    box-shadow: 0px 0px 41px 5px rgba(0,0,0,0.52);
+}
