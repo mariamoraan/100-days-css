@@ -1,0 +1,177 @@
+:root{
+    --sun: #FFEF00;
+    --sand: #F0DE75;
+    --sky:#7DDFFC;
+    --pyramid: #F4F4F4;
+    --shadow: #C0B25E;
+    --pyramid-height: 100px;
+}
+#challenge-3{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: inherit;
+    background: #272C34;
+}
+#challenge-3 .frame{
+    position: relative;
+    height: 500px;
+    width: 500px;
+    background: var(--sky);
+    border-radius: 100%;
+    overflow: hidden;
+}
+#challenge-3 .cover{
+    position: absolute;
+    z-index: 200;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    height: 550px;
+    width: 550px;
+    background: #272C34;
+    border-radius: 100%;
+    animation-name: coverAnimation;
+    animation-duration:8s;
+    animation-iteration-count:infinite;
+    animation-timing-function: ease-in-out;
+}
+#challenge-3 .frame .sun{
+    position: relative;
+    z-index: 2;
+    top: 80px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: calc(var(--pyramid-height)/2);
+    height: calc(var(--pyramid-height)/2);
+    border-radius: 50%;
+    background: var(--sun);
+    transform-origin: 150% 300px;
+    transform: rotate(-40deg);
+    animation-name:sunAnimation;
+    animation-duration:8s;
+    animation-iteration-count:infinite;
+    animation-timing-function: ease-in-out;
+}
+
+#challenge-3 .frame .triangle:nth-child(3){
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: calc(var(--pyramid-height) + 1px);
+    margin: auto;
+    height: var(--pyramid-height);
+    width: calc(var(--pyramid-height) + 1px);
+    background: #DDDADA;
+    clip-path: polygon(30% 100%, 100% 100%, 0% 0%);
+    animation-name: pyramidAnimation2;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+#challenge-3 .frame .triangle:nth-child(2){
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0px;
+    margin: auto;
+    height: var(--pyramid-height);
+    width: calc(var(--pyramid-height)*2);
+    background: #F4F4F4;
+    clip-path: polygon(0% 100%, 100% 100%, 50% 0%);
+    animation-name: pyramidAnimation1;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+.shadow {
+    position: absolute;
+    z-index: 100;
+	top: calc(var(--pyramid-height)*2);
+    bottom: 0;
+    right: 0;
+    left: 0;
+    transform: translateX(calc(var(--pyramid-height)));
+    margin: auto;
+	height: var(--pyramid-height);
+	width: calc(var(--pyramid-height)*4);
+    clip-path: polygon(0 0, 100% 70%, 50% 0);
+	background: rgba(0,0,0,0.2);
+    animation-name: shadowAnimation;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+#challenge-3 .frame .sand{
+    background: var(--sand);
+    width: 100%;
+    height: calc(50% - var(--pyramid-height)/2);
+    position: absolute;
+    bottom: 0;
+}
+
+@keyframes sunAnimation{
+    0% {
+        transform: rotate(-40deg);
+    }   
+    30%{
+        transform: rotate(-5deg);
+    }
+    100% {
+        transform: rotate(50deg);
+    }
+}
+@keyframes pyramidAnimation1{
+    0% {
+        background: #F4F4F4;
+    }   
+    30%{
+        background: #F4F4F4;
+    }
+    90% {
+        background: #DDDADA;
+    }
+}
+@keyframes pyramidAnimation2{
+    0% {
+        background: #DDDADA;
+    }   
+    30%{
+        background: #DDDADA;
+    }
+    90% {
+        background: #F4F4F4;
+    }
+}
+@keyframes shadowAnimation {
+	30%, 40% {
+		clip-path: polygon(0 0, 40% 30%, 50% 0);
+		transform: translateX(calc(var(--pyramid-height)));
+	}
+	100% {
+		clip-path: polygon(20% 0, 0 20%, 70% 0);
+		transform: translateX(0);
+	}
+}
+@keyframes coverAnimation{
+    0%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 0;
+    }
+    85%{
+        opacity: 0.5;
+    }
+    100%{
+        opacity: 1;
+    }
+}
