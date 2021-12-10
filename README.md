@@ -19,18 +19,5 @@ To run the project locally:
 To change between projects change the number on the layout component.
 For example, this structor will show the challenge 1:
 
-```
-import React from 'react';
-import './styles.css';
 
-const Layout = () =>{
-    return(
-        <div class="layout">
-            <Challenge1 />
-        </div>
-    )
-}
-
-export default Layout;
-```
 
