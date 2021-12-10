@@ -2,15 +2,17 @@
     position: absolute;
     top: 0;
     left: 0;
+    height: 8vh;
     width: 100%;
-    border-bottom: 1px solid var(--blue-green);
+    border-bottom: 0.1px solid var(--light-purple);
 }
 #main-menu ul{
-    padding: 0;
+    padding: 0 32px;
     margin: 0;
     height: 100%;
     display: flex;
     align-items: center;
+    justify-content: space-between;
     list-style: none;
 }
 #main-menu ul li{

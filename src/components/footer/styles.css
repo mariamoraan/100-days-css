@@ -1,0 +1,8 @@
+footer{
+    position: absolute;
+    bottom: -18vh;
+    left: 0;
+    height: 20vh;
+    width: 100%;
+    background: var(--black);
+}

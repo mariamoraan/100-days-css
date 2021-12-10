@@ -1,12 +1,14 @@
-import {React} from 'react';
+import {React, useState} from 'react';
 import { useNavigate } from 'react-router-dom';
+import SecondaryMenu from '../secondaryMenu';
 import './styles.css';
 
 const Menu = () =>{
+    const [active, setActive] = useState(false);
     const navigate = useNavigate();
     const getActualChallenge = () => {
         const regx = /\d+/;
-        var v = window.location.pathname.match(regx)[0];
+        var v = window.location.pathname.match(regx) != null ? window.location.pathname.match(regx)[0] : 1;
         return parseInt(v);
     }
     const handlePrev = () => {
@@ -29,7 +31,11 @@ const Menu = () =>{
                     <h1>Challenge {getActualChallenge()}</h1>
                     <button onClick={handleNext}><span className="material-icons">arrow_forward</span></button>
                 </li>
+                <li>
+                    <button onClick={()=>{setActive(!active)}}><span className="material-icons">menu</span></button>
+                </li>
             </ul>
+            <SecondaryMenu active={active}/>
         </nav>
     )
 }

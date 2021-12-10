@@ -5,6 +5,7 @@ import Challenge2 from './challenges/challenge2';
 import Challenge3 from './challenges/challenge3';
 import Challenge4 from './challenges/challenge4';
 import NotFound from './components/notFound';
+import Footer from './components/footer';
 function App() {
   return (
     <div>
@@ -19,7 +20,8 @@ function App() {
               <Route path="/challenge-4" element={<Challenge4/>} />
               <Route path="*" element={<NotFound/>} />
           </Routes>
-        </div>    
+        </div>  
+        <Footer />  
       </BrowserRouter>
       </div>
   );
