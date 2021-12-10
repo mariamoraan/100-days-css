@@ -1,0 +1,32 @@
+#main-menu{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    border-bottom: 1px solid var(--blue-green);
+}
+#main-menu ul{
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+#main-menu ul li{
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+#main-menu ul li button{
+    margin: 0 16px;
+    background: none;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+
+

@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@700&display=swap');
+:root{
+    --size: 40px;
+}
+#challenge-4{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    font-family: 'Source Sans Pro', sans-serif;
+    border-radius: inherit;
+    background: #E56262;
+}
+#challenge-4 .circle{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    height: var(--size);
+    width: var(--size);
+    background: white;
+    border-radius: 100%;
+    transform: scale(0);
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+#challenge-4 .circle:nth-child(1){
+    height: calc(var(--size)*1);
+    width: calc(var(--size)*1);
+    z-index: 300;
+    animation-name: animateCircle1;
+}
+#challenge-4 .circle:nth-child(2){
+    height: calc(var(--size)*2);
+    width: calc(var(--size)*2);
+    z-index: 200;
+    animation-name: animateCircle2;  
+}
+#challenge-4 .circle:nth-child(3){
+    height: calc(var(--size)*3);
+    width: calc(var(--size)*3);
+    z-index: 100;
+    animation-name: animateCircle3;
+}
+
+@keyframes animateCircle3{
+    0%{
+        transform: scale(0);
+        box-shadow: 3px 3px 4px 3px rgba(0, 0, 0, .2);
+    }
+    30%, 80%{
+        transform: scale(1);
+        box-shadow: 13px 13px 16px 0 rgba(0, 0, 0, .2);
+    }
+    100%{
+        transform: scale(0);
+        box-shadow: 3px 3px 4px 3px rgba(0, 0, 0, .2);
+    }
+}
+
+@keyframes animateCircle2{
+    0%, 25%{
+        transform: scale(0);
+        box-shadow: 3px 3px 4px 3px rgba(0, 0, 0, .2);
+    }
+    40%, 70%{
+        transform: scale(1);
+        box-shadow: 13px 13px 16px 0 rgba(0, 0, 0, .2);
+    }
+    85%{
+        transform: scale(0);
+        box-shadow: 3px 3px 4px 3px rgba(0, 0, 0, .2);
+    }
+}
+@keyframes animateCircle1{
+    0%,30%, 34%{
+        transform: scale(0);
+        box-shadow: 3px 3px 4px 3px rgba(0, 0, 0, .2);
+    }
+    50%, 65%{
+        transform: scale(1);
+        box-shadow: 13px 13px 16px 0 rgba(0, 0, 0, .2);
+    }
+    75%{
+        transform: scale(0);
+        box-shadow: 3px 3px 4px 3px rgba(0, 0, 0, .2);
+    }
+}
