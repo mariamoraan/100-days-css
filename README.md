@@ -20,4 +20,7 @@ To change between projects change the number on the layout component.
 For example, this structor will show the challenge 1:
 
 
+## Attributions
+
+[Web ilustrations by Storyset](https://storyset.com/web)
 
