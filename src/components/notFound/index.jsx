@@ -1,12 +1,11 @@
 import {React} from 'react';
 import './styles.css';
-
+import error from '../../assets/404.png';
 const NotFound = () =>{
    
     return(
-        <div>
-            <h1>404</h1>
-            <h2>Not found :(</h2>
+        <div id="not-found">
+           <img src={error} alt="Error 404 : Page not found" />
         </div>
     )
 }
