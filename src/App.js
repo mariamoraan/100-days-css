@@ -13,11 +13,11 @@ function App() {
         <Menu/>
         <div className="layout">
           <Routes>
-              <Route path="/" element={<Challenge1/>} />
               <Route path="/challenge-1" element={<Challenge1/>} />
               <Route path="/challenge-2" element={<Challenge2/>} />
               <Route path="/challenge-3" element={<Challenge3/>} />
               <Route path="/challenge-4" element={<Challenge4/>} />
+              <Route path="/" element={<Challenge1/>} />
               <Route path="*" element={<NotFound/>} />
           </Routes>
         </div>  

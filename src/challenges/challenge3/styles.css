@@ -20,6 +20,8 @@
     position: relative;
     height: 500px;
     width: 500px;
+    max-height: 40vh;
+    max-width: 40vh;
     background: var(--sky);
     border-radius: 100%;
     overflow: hidden;
@@ -32,8 +34,10 @@
     right: 0;
     bottom: 0;
     margin: auto;
-    height: 550px;
-    width: 550px;
+    height: 500px;
+    width: 500px;
+    max-height: 40vh;
+    max-width: 40vh;
     background: #272C34;
     border-radius: 100%;
     animation-name: coverAnimation;
@@ -44,7 +48,7 @@
 #challenge-3 .frame .sun{
     position: relative;
     z-index: 2;
-    top: 80px;
+    top: 30px;
     left: 0;
     right: 0;
     margin: auto;

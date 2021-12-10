@@ -28,7 +28,7 @@ const Menu = () =>{
             <ul>
                 <li className="arrow-navigator">
                     <button onClick={handlePrev}><span className="material-icons">arrow_back</span></button>
-                    <h1>Challenge {getActualChallenge()}</h1>
+                    <p>Challenge {getActualChallenge()}</p>
                     <button onClick={handleNext}><span className="material-icons">arrow_forward</span></button>
                 </li>
                 <li>
